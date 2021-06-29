@@ -21,6 +21,6 @@
 
 ### Mandatory Vars.
 ## Some Of The Mandatory Vars Are :-
- - API_ID : Give API_ID of your Alternate Telegram Account. also get from  [here](telegram .org)
- - API_HASH : Give API_HASH of your Alternate Telegram Account. also get from [here](telegram .org)
+ - API_ID : Give API_ID of your Alternate Telegram Account. also get from  telegram .org
+ - API_HASH : Give API_HASH of your Alternate Telegram Account. also get from telegram .org
  - BOT_TOKEN : Make a Bot from @Botfather and fill it's bot token.
