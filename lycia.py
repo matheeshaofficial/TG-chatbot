@@ -8,18 +8,18 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram import Client, filters
 from google_trans_new import google_translator
 url = "https://acobot-brainshop-ai-v1.p.rapidapi.com/get"
-
+ 
 translator = google_translator()
-
+ 
 BOT_ID = 1688991183
-
+ 
 def extract_emojis(s):
     return "".join(c for c in s if c in emoji.UNICODE_EMOJI)
-
+ 
 #Chatbot Modules By  @InukaAsith
-
+ 
 en_chats = []
-
+ 
 @LYCIA.on_message(
     filters.text & filters.reply & ~filters.bot & ~filters.via_bot & ~filters.forwarded,
     group=2,
@@ -50,11 +50,11 @@ async def lycia(client, message):
         result = result.replace('{"cnt":"', "")
         result = result.replace('"}', "")
         result = result.replace("Aco", "TG-chatbot")
-        result = result.replace("Eliza", "tg-chatbot")
-        result = result.replace("Hi~", "Hello Friend I Am chatbot ")
-        result = result.replace("My dear great botmaster, @slbotzone  Team.", "Made By @supunma")
-        result = result.replace("Have the control right.", "My Father Is @supunma")
-        result = result.replace("I was created by @slbotzone Team.", "I was created by @supunma.")
+        result = result.replace("Piumisha", "Freind")
+        result = result.replace("Hi~", "හායි මම පියුමීශා ")
+        result = result.replace("My dear great botmaster, Made by Sik .", "Made By @percy_jackson_4")
+        result = result.replace("Have the control right.", "My Father Is @percy_jackson_4")
+        result = result.replace("I was created by Park Hyung Sik.", "I was created by @Boy_alone_in_universe2.")
         result = result.replace("<a href=\\", "<a href =")
         result = result.replace("<\/a>", "</a>")
         red = result
@@ -73,7 +73,7 @@ async def lycia(client, message):
             and [(k) for k in u if k.startswith("/")]
             and re.findall(r"\[([^]]+)]\(\s*([^)]+)\s*\)", msg) != []
         ):
-
+ 
             h = " ".join(filter(lambda x: x[0] != "@", u))
             km = re.sub(r"\[([^]]+)]\(\s*([^)]+)\s*\)", r"", h)
             tm = km.split()
@@ -81,7 +81,7 @@ async def lycia(client, message):
             hm = jm.split()
             rm = " ".join(filter(lambda x: x[0] != "/", hm))
         elif [(k) for k in u if k.startswith("@")]:
-
+ 
             rm = " ".join(filter(lambda x: x[0] != "@", u))
         elif [(k) for k in u if k.startswith("#")]:
             rm = " ".join(filter(lambda x: x[0] != "#", u))
@@ -95,7 +95,7 @@ async def lycia(client, message):
         aura = rm
         if not "en" in lan and not lan == "":
             aura = translator.translate(aura, lang_tgt="en")
-
+ 
         aura = aura.replace("lycia", "Aco")
         aura = aura.replace("Lycia", "Aco")
         querystring = {
@@ -128,9 +128,9 @@ async def lycia(client, message):
             await message.reply_text(red)
         except CFError as e:
             print(e)
-
-
-
+ 
+ 
+ 
 @LYCIA.on_message(filters.text & filters.private & ~filters.reply & ~filters.bot)
 async def redaura(client, message):
     msg = message.text
@@ -145,7 +145,7 @@ async def redaura(client, message):
         and [(k) for k in u if k.startswith("/")]
         and re.findall(r"\[([^]]+)]\(\s*([^)]+)\s*\)", msg) != []
     ):
-
+ 
         h = " ".join(filter(lambda x: x[0] != "@", u))
         km = re.sub(r"\[([^]]+)]\(\s*([^)]+)\s*\)", r"", h)
         tm = km.split()
@@ -153,7 +153,7 @@ async def redaura(client, message):
         hm = jm.split()
         rm = " ".join(filter(lambda x: x[0] != "/", hm))
     elif [(k) for k in u if k.startswith("@")]:
-
+ 
         rm = " ".join(filter(lambda x: x[0] != "@", u))
     elif [(k) for k in u if k.startswith("#")]:
         rm = " ".join(filter(lambda x: x[0] != "#", u))
@@ -167,7 +167,7 @@ async def redaura(client, message):
     aura = rm
     if not "en" in lan and not lan == "":
         aura = translator.translate(aura, lang_tgt="en")
-
+ 
    
     aura = aura.replace("lycia", "Aco")
     aura = aura.replace("Lycia", "Aco")
@@ -201,8 +201,8 @@ async def redaura(client, message):
         await message.reply_text(red)
     except CFError as e:
         print(e)
-
-
+ 
+ 
 @LYCIA.on_message(
     filters.regex("Lycia|lycia|LYCIA")
     & ~filters.bot
@@ -224,7 +224,7 @@ async def redaura(client, message):
         and [(k) for k in u if k.startswith("/")]
         and re.findall(r"\[([^]]+)]\(\s*([^)]+)\s*\)", msg) != []
     ):
-
+ 
         h = " ".join(filter(lambda x: x[0] != "@", u))
         km = re.sub(r"\[([^]]+)]\(\s*([^)]+)\s*\)", r"", h)
         tm = km.split()
@@ -232,7 +232,7 @@ async def redaura(client, message):
         hm = jm.split()
         rm = " ".join(filter(lambda x: x[0] != "/", hm))
     elif [(k) for k in u if k.startswith("@")]:
-
+ 
         rm = " ".join(filter(lambda x: x[0] != "@", u))
     elif [(k) for k in u if k.startswith("#")]:
         rm = " ".join(filter(lambda x: x[0] != "#", u))
@@ -246,8 +246,8 @@ async def redaura(client, message):
     aura = rm
     if not "en" in lan and not lan == "":
         aura = translator.translate(aura, lang_tgt="en")
-
-
+ 
+ 
     aura = aura.replace("lycia", "Aco")
     aura = aura.replace("Lycia", "Aco")
     querystring = {
@@ -282,3 +282,4 @@ async def redaura(client, message):
         print(e)
         
        
+ 
